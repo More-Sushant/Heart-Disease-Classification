@@ -1,6 +1,6 @@
 # Heart-Disease-Prediction
 ### Steps for running the project:
-1. Download the file and extract it.
+1. Download the files and extract it.
 2. Open the terminal in the same location.
 3. Type "streamlit run app.py" in that terminal.
 4. A web page will open to enter details.
