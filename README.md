@@ -1,4 +1,5 @@
-# Heart-Disease-Prediction
+# Heart-Disease-Prediction 🩺
+
 ### Steps for running the project:
 1. Download the files and extract them.
 2. Open the terminal or anaconda prompt at the same location and fulfill the required library in a particular environment.
@@ -52,4 +53,4 @@ The provided parameters are likely related to heart disease prediction. Let's br
 
 These parameters are commonly used in machine learning models to predict the likelihood of heart disease. Analyzing these factors, a model can identify individuals at higher risk and recommend appropriate interventions.
 
-Upvote this repo and follow for more.
+Upvote this repo and follow for more⬆️⬆️⬆️🔝.
