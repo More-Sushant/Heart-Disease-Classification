@@ -1,23 +1,13 @@
 import streamlit as st  
 import pandas as pd 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-import warnings
+import pickle
 
 def classify(age, sex, cp, trestbps, chol, restecg, thalach, exang, oldpeak, slope, ca, thal):
-    df = pd.read_csv("datasets/cleaned_heartDisease.csv")
-    x = df.iloc[:,:-1]
-    y = df.iloc[:,-1]
-    
-    scaler = StandardScaler()
-    warnings.filterwarnings('ignore', category=UserWarning)
-    xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.25, random_state=47)
-    xtrain = scaler.fit_transform(xtrain)
-    xtest = scaler.transform(xtest)
-    
-    model = RandomForestClassifier(n_estimators=100)
-    model.fit(xtrain,ytrain)
+
+    with open('./models/Model.pkl', 'rb') as file:
+        model = pickle.load(file)
+    with open('./models/scaler.pkl', 'rb') as file:
+        scaler = pickle.load(file)
     
     return model.predict(scaler.transform([[age, sex, cp, trestbps, chol, restecg, thalach, exang, oldpeak, slope, ca, thal]]))
 
