@@ -27,7 +27,7 @@ This project is a web-based application built using **Streamlit** that classifie
 1. Clone the repository:
 
 ```bash
-git clone <repository-link>
+git clone "https://github.com/More-Sushant/Heart-Disease-Classification.git"
 ```
 
 2. Navigate to the project directory:
